@@ -3,7 +3,7 @@
 Valgrind is a local, tracker-free, minimal yet customizable startpage, i.e. you can configure your browser to display it whenever you open a new tab. It will randomly loop through a list of quotes, and display a list of bookmarks when the user’s cursor moves over the top half of the window.
 
 - ⯈ [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html)
-- [Project website](https://heracl.es)
+- [Project website](https://heracl.es/valgrind)
 - Current version: `2.0`
 
 ![Screenshot of Valgrind’s start view](./screenshots/valgrind-screenshot_01.png)
@@ -21,13 +21,13 @@ Single page; no external assets; no build systems; functional vanilla JavaScript
 
 You may set the [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html) as your Homepage, or use a plugin such as [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) (Firefox). Click the gear (`⚙`) button, or double click anywhere to open the Settings panel. Your modifications are saved automatically in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). To see your changes, it is necessary to click the Reload (`⭯`) button. Click the gear icon again, or hit the `Esc` key to exit the Settings panel and automatically reload the page. There is currently no way to automatically backup your settings. You can click the Reset (`⭞`) button to return to the initial, default state.
 
-The font used in the screenshot above is [Lekton](https://fonts.google.com/specimen/Lekton) designed at ISIA Urbino, Italy. Specifically the (Lekton Greek)[https://www.roleplay.gr/blog/greekifying-lekton-font] version, autohinted by the author.
+The font used in the screenshot above is [Lekton](https://fonts.google.com/specimen/Lekton) designed at ISIA Urbino, Italy. Specifically the [Lekton Greek](https://www.roleplay.gr/blog/greekifying-lekton-font) version, autohinted by the author.
 
 ![Screenshot of Valgrind’s Settings panel](./screenshots/valgrind-screenshot_02.png)
 
 ### Quotes
 
-Each quote should extend to a single line; empty lines are ignored. The `> ` Markdown notation for blockquotes is also ignored. A double dash between spaces (` -- `) can be used to indicate the author’s name. Click on the current quote to randomly display another. Example:
+Each quote should extend to a single line; empty lines are ignored. The [Markdown](https://heracl.es/markdown) notation (`> `)for blockquotes is also ignored. A double dash between spaces (` -- `) can be used to indicate the author’s name. Click on the current quote to randomly display another. Example:
 
 ```
 Do the best you can until you know better. Then when you know better, do better. -- Maya Angelou
