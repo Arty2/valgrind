@@ -14,7 +14,7 @@ https://heracl.es/valgrind
 			--page-color: 16, 16, 16;
 			--text-color: 204, 204, 204;
 			--hyperlink-color: 204, 204, 204;
-			--accent-color: 205, 35, 185;
+			--accent-color: 255, 0, 191;
 			--text-color-inverted: 20, 20, 20;
 
 			--line-height: 1.4em;  /* units used implicitely, but could be removed if multiplied with s00 later */
@@ -121,6 +121,17 @@ https://heracl.es/valgrind
 
 		.hidable:hover {
 			/*transition-delay: 0s;*/
+		}
+
+		#marker {
+			position: fixed;
+			top: var(--gutter-height);
+			left: var(--gutter-width);
+			height: var(--line-height);
+
+			font-size: var(--s-2);
+
+			animation: bounce 2s ease 3;
 		}
 
 		#status {
@@ -275,18 +286,29 @@ https://heracl.es/valgrind
 			font-style: italic;
 		}
 
-		#status, #tools, #display-quotes,
+		#marker, #status, #tools, #display-quotes,
 		#settings, #settings label,
 		#display-bookmarks, #display-bookmarks ul {
 			user-select: none;
 			/*DEBUG*/
 			/*background: rgba(255,0,0,0.2);*/
 		}
+
+		@keyframes bounce {
+			0%   { transform: translateY(0); }
+			10%  { transform: translateY(0); }
+			30%  { transform: translateY(-0.5rem); }
+			50%  { transform: translateY(0); }
+			57%  { transform: translateY(-0.1rem); }
+			64%  { transform: translateY(0); }
+			100% { transform: translateY(0); }
+		}
 	</style>
 </head>
 <body>
 <style id="display-styles"></style>
 <div id="status">Loading error</div>
+<div id="marker">⛩<!-- △ --></div>
 <div id="tools">
 	<a onclick="reset();" title="Reset" class="hidable hidden">⭞</a>
 	<a onclick="location.reload();" title="Reload" class="hidable hidden">⭯</a>
@@ -314,7 +336,7 @@ https://heracl.es/valgrind
 --page-color: 16, 16, 16;
 --text-color: 204, 204, 204;
 --hyperlink-color: 204, 204, 204;
---accent-color: 205, 35, 185;
+--accent-color: 255, 0, 191;
 --text-color-inverted: 20, 20, 20;
 
 --line-height: 1.4em;
@@ -348,7 +370,7 @@ link text 6,https://www.w3.org
 </label>
 </div>
 <script>
-	let version = '2.0';
+	let version = '2.1';
 	let styles, bookmarks, quotes;
 
 	/* functions --------------------------------------------------*/
@@ -502,7 +524,7 @@ link text 6,https://www.w3.org
 		// update online-offline status
 		window.addEventListener('online',  function(){status('connection restored');});
 		window.addEventListener('offline', function(){status('no internet connection','offline');});
-		window.addEventListener('dblclick', toggle_settings);
+		// window.addEventListener('dblclick', toggle_settings);
 		$('settings').addEventListener('keydown', function(e) {
 			// Allow ESC (27) to close search box
 			if (e.keyCode == 27) { toggle_settings(); }

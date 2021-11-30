@@ -4,7 +4,7 @@ Valgrind is a local, tracker-free, minimal yet customizable startpage, i.e. you 
 
 - ⯈ [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html)
 - [Project website](https://heracl.es/valgrind)
-- Current version: `2.0`
+- Current version: `2.1`
 
 ![Screenshot of Valgrind’s start view](./screenshots/valgrind-screenshot_01.png)
 
@@ -19,7 +19,7 @@ Single page; no external assets; no build systems; functional vanilla JavaScript
 
 ## Configuration
 
-You may set the [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html) as your Homepage, or use a plugin such as [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) (Firefox) or [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/) (Chrome). Click the gear (`⚙`) button, or double click anywhere to open the Settings panel. Your modifications are saved automatically in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). To see your changes, it is necessary to click the Reload (`⭯`) button. Click the gear icon again, or hit the `Esc` key to exit the Settings panel and automatically reload the page. There is currently no way to automatically backup your settings. You can click the Reset (`⭞`) button to return to the initial, default state.
+You may set the [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html) as your Homepage, or use a plugin such as [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) (Firefox) or [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/) (Chrome). Click the gear (`⚙`) button<!-- , or double click anywhere --> to open the Settings panel. Your modifications are saved automatically in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). To see your changes, it is necessary to click the Reload (`⭯`) button. Click the gear icon again, or hit the `Esc` key to exit the Settings panel and automatically reload the page. There is currently no way to automatically backup your settings. You can click the Reset (`⭞`) button to return to the initial, default state.
 
 The font used in the screenshot above is [Lekton](https://fonts.google.com/specimen/Lekton) designed at ISIA Urbino, Italy. Specifically the [Lekton Greek](https://www.roleplay.gr/blog/greekifying-lekton-font) version, autohinted by the author.
 
@@ -61,7 +61,7 @@ The Settings panel allows the user to style everything on the page using [CSS](h
 	--page-color: 16, 16, 16;
 	--text-color: 204, 204, 204;
 	--hyperlink-color: 204, 204, 204;
-	--accent-color: 205, 35, 185;
+	--accent-color: 255, 0, 191;
 	--text-color-inverted: 20, 20, 20;
 
 	--line-height: 1.4em;
@@ -168,6 +168,11 @@ The Settings panel allows the user to style everything on the page using [CSS](h
 	--text-color-inverted: 0, 0, 255;
 }
 ```
+
+## TODO
+
+- [ ] remove dbclick from textarea, or don't propagate (interferes with selection)
+- [ ] try to implement setInterval for updating quotes in a way that doesn't steal focus
 
 * * *
 
