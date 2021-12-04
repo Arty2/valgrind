@@ -131,7 +131,8 @@ https://heracl.es/valgrind
 
 			font-size: var(--s-2);
 
-			animation: bounce 2s ease 3;
+			animation: blink 3s ease 3;
+			animation-fill-mode: forwards;
 		}
 
 		#status {
@@ -294,14 +295,10 @@ https://heracl.es/valgrind
 			/*background: rgba(255,0,0,0.2);*/
 		}
 
-		@keyframes bounce {
-			0%   { transform: translateY(0); }
-			10%  { transform: translateY(0); }
-			30%  { transform: translateY(-0.5rem); }
-			50%  { transform: translateY(0); }
-			57%  { transform: translateY(-0.1rem); }
-			64%  { transform: translateY(0); }
-			100% { transform: translateY(0); }
+		@keyframes blink {
+			0%   { opacity: 0; }
+			50%  { opacity: 1; }
+			100% { opacity: 0; }
 		}
 	</style>
 </head>
@@ -370,7 +367,7 @@ link text 6,https://www.w3.org
 </label>
 </div>
 <script>
-	let version = '2.2';
+	let version = '2.3';
 	let styles, bookmarks, quotes;
 
 	/* functions --------------------------------------------------*/
