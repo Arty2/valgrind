@@ -2,7 +2,7 @@
 
 Valgrind is a local, tracker-free, minimal yet customizable startpage, i.e. you can configure your browser to display it whenever you open a new tab. It will randomly loop through a list of quotes, and display a list of bookmarks when the user’s cursor moves over the top half of the window.
 
-- ⯈ [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html)
+- [Live Demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html)
 - [Project website](https://heracl.es/valgrind)
 - Current version: `2.4` (2021-12-04)
 
@@ -19,7 +19,7 @@ Single page; no external assets; no build systems; functional vanilla JavaScript
 
 ## Configuration
 
-You may set the [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html) as your Homepage, or use a plugin such as [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) (Firefox) or [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/) (Chrome). Click the gear (`⚙`) button<!-- , or double click anywhere --> to open the Settings panel. Your modifications are saved automatically in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). To see your changes, it is necessary to click the Reload (`⭯`) button. Click the gear icon again, or hit the `Esc` key to exit the Settings panel and automatically reload the page. There is currently no way to automatically backup your settings. You can click the Reset (`⭞`) button to return to the initial, default state.
+You may set the [Live Demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html) as your Homepage, or use a plugin such as [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) (Firefox) or [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/) (Chrome). Click the gear (`⚙`) button<!-- , or double click anywhere --> to open the Settings panel. Your modifications are saved automatically in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). To see your changes, it is necessary to click the Reload (`⭯`) button. Click the gear icon again, or hit the `Esc` key to exit the Settings panel and automatically reload the page. There is currently no way to automatically backup your settings. You can click the Reset (`⭞`) button to return to the initial, default state.
 
 The font used in the screenshot above is [Lekton](https://fonts.google.com/specimen/Lekton) designed at ISIA Urbino, Italy. Specifically the [Lekton Greek](https://www.roleplay.gr/blog/greekifying-lekton-font) version, autohinted by the author.
 
@@ -52,7 +52,7 @@ link text 6,https://www.w3.org
 
 ### Styles
 
-The Settings panel allows the user to style everything on the page using [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS). The defaults expose some “variables” to easily edit RGB values of colors, or the fonts. To install the following color-schemes, simply copy & paste the code inside the Styles field.
+The Settings panel allows the user to style everything on the page using [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS). The defaults expose some [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to easily edit RGB values of colors, or the fonts. To install the following color-schemes, simply copy & paste the code inside the Styles field.
 
 #### Default (dark)
 
@@ -171,8 +171,8 @@ The Settings panel allows the user to style everything on the page using [CSS](h
 
 ## TODO
 
-- [ ] remove dbclick from textarea, or don't propagate (interferes with selection)
-- [ ] try to implement setInterval for updating quotes in a way that doesn't steal focus
+- [ ] setInterval for updating quotes in a way that doesn’t steal focus from settings
+- [ ] [hundredrabbits / Themes](https://github.com/hundredrabbits/Themes) simple theme framework; convert current themes
 
 * * *
 
