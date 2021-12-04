@@ -308,7 +308,7 @@ https://heracl.es/valgrind
 <body>
 <style id="display-styles"></style>
 <div id="status">Loading error</div>
-<div id="marker">⛩<!-- △ --></div>
+<div id="marker">⬤<!-- △ --></div>
 <div id="tools">
 	<a onclick="reset();" title="Reset" class="hidable hidden">⭞</a>
 	<a onclick="location.reload();" title="Reload" class="hidable hidden">⭯</a>
@@ -370,7 +370,7 @@ link text 6,https://www.w3.org
 </label>
 </div>
 <script>
-	let version = '2.1';
+	let version = '2.2';
 	let styles, bookmarks, quotes;
 
 	/* functions --------------------------------------------------*/
@@ -527,8 +527,11 @@ link text 6,https://www.w3.org
 		// window.addEventListener('dblclick', toggle_settings);
 		$('settings').addEventListener('keydown', function(e) {
 			// Allow ESC (27) to close search box
-			if (e.keyCode == 27) { toggle_settings(); }
-			setTimeout(function(){ location.reload(); }, 3*1000);
+			if (e.keyCode == 27) {
+				toggle_settings();
+				setTimeout(function(){ location.reload(); }, 3*1000);
+			}
+			
 		});
 
 		// offline indicator
