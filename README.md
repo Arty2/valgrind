@@ -4,7 +4,7 @@ Valgrind is a local, tracker-free, minimal yet customizable startpage, i.e. you 
 
 - ⯈ [Live demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html)
 - [Project website](https://heracl.es/valgrind)
-- Current version: `2.3` (2021-12-04)
+- Current version: `2.4` (2021-12-04)
 
 ![Screenshot of Valgrind’s start view](./screenshots/valgrind-screenshot_01.png)
 

@@ -40,6 +40,16 @@ https://heracl.es/valgrind
 			outline: 0;
 		}
 
+		::-moz-selection {
+			color: rgb(var(--text-color-inverted));
+			background: rgb(var(--text-color));
+		}
+
+		::selection {
+			color: rgb(var(--text-color-inverted));
+			background: rgb(var(--text-color));
+		}
+
 		html, * {
 			box-sizing: border-box;
 			font-family: var(--font);
@@ -367,7 +377,7 @@ link text 6,https://www.w3.org
 </label>
 </div>
 <script>
-	let version = '2.3';
+	let version = '2.4';
 	let styles, bookmarks, quotes;
 
 	/* functions --------------------------------------------------*/
