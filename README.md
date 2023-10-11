@@ -1,27 +1,19 @@
 # /valgrind
 
-Valgrind is a local, tracker-free, minimal yet customizable startpage, i.e. you can configure your browser to display it whenever you open a new tab. It will randomly loop through a list of quotes, and display a list of bookmarks when the user’s cursor moves over the top half of the window.
+*Valgrind* is a local, tracker-free, minimal yet customizable startpage, i.e. you can configure your browser to display it whenever you open a new tab. It will randomly loop through a list of quotes, and display a list of bookmarks when the user’s cursor moves over the top half of the window.
 
 - [Live Demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html)
 - [Project website](https://heracl.es/valgrind)
-- Current version: `2.4` (2021-12-04)
+- Current version: `2.5` (2023-10-12)
 
 ![Screenshot of Valgrind’s start view](./screenshots/valgrind-screenshot_01.png)
 
-## Approach
 
-Single page; no external assets; no build systems; functional vanilla JavaScript.
-
-## Etymology
-
-> Valgrind, also known as The Gate of the Dead or The Sacred Gate, is the main entrance to Valhalla.
-
-
-## Configuration
+## How to use
 
 You may set the [Live Demo](https://rawcdn.githack.com/Arty2/valgrind/master/valgrind.html) as your Homepage, or use a plugin such as [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) (Firefox) or [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/) (Chrome). Click the gear (`⚙`) button<!-- , or double click anywhere --> to open the Settings panel. Your modifications are saved automatically in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). To see your changes, it is necessary to click the Reload (`⭯`) button. Click the gear icon again, or hit the `Esc` key to exit the Settings panel and automatically reload the page. There is currently no way to automatically backup your settings. You can click the Reset (`⭞`) button to return to the initial, default state.
 
-The font used in the screenshot above is [Lekton](https://fonts.google.com/specimen/Lekton) designed at ISIA Urbino, Italy. Specifically the [Lekton Greek](https://www.roleplay.gr/blog/greekifying-lekton-font) version, autohinted by the author.
+Always be cautious of scripts you find available online: open them in a text editor and inspect what they do.
 
 ![Screenshot of Valgrind’s Settings panel](./screenshots/valgrind-screenshot_02.png)
 
@@ -169,10 +161,25 @@ The Settings panel allows the user to style everything on the page using [CSS](h
 }
 ```
 
-## TODO
+## Future Improvements
 
-- [ ] setInterval for updating quotes in a way that doesn’t steal focus from settings
-- [ ] [hundredrabbits / Themes](https://github.com/hundredrabbits/Themes) simple theme framework; convert current themes
+- [ ] Settings should open be full-page. Toolbar should display on top.
+- [ ] setInterval for updating quotes in a way that doesn’t steal focus from settings.
+- [ ] Considering [hundredrabbits / Themes](https://github.com/hundredrabbits/Themes) simple theme framework; convert current themes.
+
+
+## Point of view
+
+Single page; no external assets; no build systems; functional vanilla JavaScript.
+Pull requests welcome if they don’t deviate from these principles or alter coding style.
+
+## Etymology
+
+> Valgrind, also known as The Gate of the Dead or The Sacred Gate, is the main entrance to Valhalla.
+
+## Credits
+
+- The font used in the screenshots above is [Lekton](https://fonts.google.com/specimen/Lekton) designed at ISIA Urbino, Italy. Specifically the [Lekton Greek](https://www.roleplay.gr/blog/greekifying-lekton-font) version designed by Manon Photopoulos, autohinted by the author.
 
 * * *
 

@@ -377,7 +377,7 @@ link text 6,https://www.w3.org
 </label>
 </div>
 <script>
-	let version = '2.4';
+	let version = '2.5';
 	let styles, bookmarks, quotes;
 
 	/* functions --------------------------------------------------*/
@@ -439,21 +439,28 @@ link text 6,https://www.w3.org
 	}
 
 	/*
+	shuffle arrays
+	via https://stackoverflow.com/a/12646864
+	*/
+
+	function array_shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+	/*
 	parse and display random quote
 	*/
 	function parse_quotes() {
 		quotes = getUserData('quotes').split("\n").filter(function(n){return n;}); //split lines into array, remove empty
-		$('display-quotes').addEventListener('mouseup', function(){
-			if (quotes.length > 1) {
-				display_quotes();
-			} else { // open settings if only 1 quote exists
-				// toggle_settings();
-			}
-		}); //attach event on click
+		array_shuffle(quotes);
 	}
 
 	function display_quotes() {
-		var quote = quotes[Math.floor(Math.random() * quotes.length)].replaceAll('> ', '').split(" -- "); // remove Markdown symbol for blockquote and split to array
+		var quote = quotes[0].replaceAll('> ', '').split(" -- "); // remove Markdown symbol for blockquote and split to array
+		quotes.shift();
 		if (typeof quote[1] === 'undefined') { quote[1] = ''; }
 		$('display-quotes').innerHTML = `${escapeHTML(quote[0])}<br><span>${escapeHTML(quote[1])}</span>`;
 	}
@@ -559,6 +566,16 @@ link text 6,https://www.w3.org
 		parse_bookmarks();
 		display_bookmarks();
 		display_styles()
+
+		//display new quote on click
+		$('display-quotes').addEventListener('mouseup', function(){
+			if (quotes.length > 1) {
+				display_quotes();
+			} else { // open settings if only 1 quote exists
+				// parse_quotes();
+				// toggle_settings();
+			}
+		});
 
 		//update date and quote every 30 seconds
 		//DEBUG: investigate why it closes the settings window
